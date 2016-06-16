@@ -63,7 +63,7 @@ func addUpdate(f *os.File) {
     temp := append([]string{"\t\t\t"},keys...)
     header := strings.Join(append(temp,"\n"),"|")
     pretext := strings.Join([]string{"\t\tWhen ",user," updates the random object from ",
-                                        resourceName," :\n"},"")
+                                        resourceName,":\n"},"")
     posttext := "\t\tThen the update should be successful\n"
 
     opt := writeSingleTest(f, header, pretext, posttext, keys, possibleAttributes)
