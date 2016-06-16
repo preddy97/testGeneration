@@ -53,7 +53,7 @@ func addIDOperations(f *os.File) {
 }
 
 func addGet(f *os.File) {
-    f.WriteString(strings.Join([]string{"\t\tWhen",user,"requests the random object from",
+    f.WriteString(strings.Join([]string{"\t\tWhen",user,"asks for the random object from",
                                     resourceName,"\n"}," "))
     f.WriteString("\t\tThen the request should be successful\n\n")
 }
@@ -69,7 +69,7 @@ func addUpdate(f *os.File) {
     opt := writeSingleTest(f, header, pretext, posttext, keys, possibleAttributes)
 
     if (model["get"]==true) {
-        f.WriteString(strings.Join([]string{"\t\tWhen",user,"requests the random object from",
+        f.WriteString(strings.Join([]string{"\t\tWhen",user,"asks for the random object from",
                                         resourceName,"\n"}," "))
         f.WriteString("\t\tThen the request should be successful\n")
         f.WriteString("\t\tAnd the body of the response should contain:\n")
@@ -123,7 +123,7 @@ func rootCreate(f *os.File) {
 
     header := strings.Join(append(temp,"\n"),"|")
     pretext := strings.Join([]string{"\t\tWhen ",user," creates a ",
-                                restName," in ",resourceName,"\n"},"")
+                                restName," in ",resourceName,":\n"},"")
     posttext := "\t\tThen the creation should be successful\n\n"
 
     populateTests(f, header, pretext, posttext, keys, possibleAttributes)
@@ -136,7 +136,7 @@ func rootDelete(f *os.File) {
 
 func rootGet(f *os.File) {
     f.WriteString(strings.Join([]string{"\tScenario: Root Get",name,"\n"}," "))
-    f.WriteString(strings.Join([]string{"\t\tWhen ",user," requests the ",restName,"\n"},""))
+    f.WriteString(strings.Join([]string{"\t\tWhen ",user," requests ",restName,"\n"},""))
     f.WriteString("\t\tThen the request should be successful\n\n")
 }
 

@@ -3,12 +3,12 @@ require 'json'
 require 'test/unit/assertions'
 include Test::Unit::Assertions
 
-When /^(.*) requests the (.*)$/ do |usr, str|
+When /^(.*) requests (.*)$/ do |usr, str|
   @last_response = HTTParty.get(convToURL(str),
                                 headers: {"X-Namespace" => @users[usr]["namespace"]})
 end
 
-When /^(.*) with header @(.*) requests the (.*)$/ do |usr, obj, str|
+When /^(.*) with header @(.*) requests (.*)$/ do |usr, obj, str|
   header = @objects[obj]
   header["X-Namespace"] = @users[usr]["namespace"]
   @last_response = HTTParty.get(convToURL(str),
@@ -23,7 +23,7 @@ When /^(.*) asks the (.*) for:$/ do |usr, str, table|
                                 headers: {"X-Namespace" => @users[usr]["namespace"]})
 end
 
-When /^(.*) requests the random object from (.*)$/ do |usr, str|
+When /^(.*) asks for the random object from (.*)$/ do |usr, str|
     @last_response = HTTParty.get(randObjURL(str),
                                   headers: {"X-Namespace" => @users[usr]["namespace"]})
 end
