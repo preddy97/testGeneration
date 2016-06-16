@@ -32,7 +32,7 @@ Feature: Tag
 		Then the creation should be successful
 
 	Scenario: Root Get Tag 
-		When SuperAdmin requests tag
+		When SuperAdmin requests tags
 		Then the request should be successful
 
 	Scenario: Tag Specific ID Operations

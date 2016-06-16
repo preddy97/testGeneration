@@ -136,7 +136,7 @@ func rootDelete(f *os.File) {
 
 func rootGet(f *os.File) {
     f.WriteString(strings.Join([]string{"\tScenario: Root Get",name,"\n"}," "))
-    f.WriteString(strings.Join([]string{"\t\tWhen ",user," requests ",restName,"\n"},""))
+    f.WriteString(strings.Join([]string{"\t\tWhen ",user," requests ",resourceName,"\n"},""))
     f.WriteString("\t\tThen the request should be successful\n\n")
 }
 
