@@ -18,7 +18,7 @@ Feature: Tag
 
 		When SuperAdmin creates a tag in tags:
 			|keyValuePair|value|key|name|description|status|
-			|past=tense|jovial|wyvern|wyvern|hire|Deleted|
+			|past=tense|jovial|wyvern|wyvern|hire|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
