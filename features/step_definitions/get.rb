@@ -39,6 +39,7 @@ When /^(.*) with header @(.*) asks the (.*) for:$/ do |usr, obj, str, table|
 end
 
 Then /^the request should be successful$/ do
+  puts @last_response.code
   if (@last_response.code==200)
     assert true
   else
