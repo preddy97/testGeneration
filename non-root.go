@@ -195,7 +195,7 @@ func writeSingleTest(f *os.File, header string, pretext string, post string,
 func initialize(f *os.File) {
     f.WriteString(strings.Join([]string{"Feature:",name,"\n"}," "))
     f.WriteString("\tBackground:\n")
-    f.WriteString("\t\tGiven I'm going to use the API: localhost:8080\n")
+    f.WriteString("\t\tGiven I'm going to use the API: https://squall.aporeto.com:8443\n")
     f.WriteString("\t\tAnd the following authentications:\n")
     f.WriteString("\t\t| name       | namespace  |\n")
     f.WriteString("\t\t| SuperAdmin | SuperAdmin |\n\n")
