@@ -33,6 +33,7 @@ end
 
 Then /^the (creation|update) should be successful$/ do |_|
     puts @last_response.code
+    puts @last_response.body
   if (@last_response.code>199 && @last_response.code<300)
     assert true
   else
