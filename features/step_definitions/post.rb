@@ -31,7 +31,7 @@ When /^(.*) with header @(.*) (creates|updates) a (.*) in (.*):/ do |usr, obj, _
                                  headers: header)
 end
 
-Then /^the (creation|update) is successful/ do
+Then /^the (creation|update) should be successful/ do
   if (@last_response.code>199 && @last_response.code<300)
     assert true
   else
@@ -39,7 +39,7 @@ Then /^the (creation|update) is successful/ do
   end
 end
 
-Then /^the (creation|update) is unsuccessful/ do
+Then /^the (creation|update) should be unsuccessful/ do
   if (@last_response.code>199 && @last_response.code<300)
     assert false
   else
