@@ -32,6 +32,7 @@ When /^(.*) with header @(.*) (creates|updates) a (.*) in (.*):$/ do |usr, obj, 
 end
 
 Then /^the (creation|update) should be successful$/ do |_|
+    puts @last_response.code
   if (@last_response.code>199 && @last_response.code<300)
     assert true
   else
