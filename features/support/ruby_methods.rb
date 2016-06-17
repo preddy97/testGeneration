@@ -78,7 +78,7 @@ end
 
 def hasSystem(hash)
     puts hash["associatedTags"].class
-    for i in 0..len(hash["associatedTags"])
+    for i in 0..hash["associatedTags"].length
         if hash["associatedTags"][i]=="namespace=system"
             return true
         end
