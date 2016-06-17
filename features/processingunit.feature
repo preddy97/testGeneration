@@ -7,103 +7,103 @@ Feature: ProcessingUnit
 
 	Scenario: Root Create ProcessingUnit 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|xylophone|vacuous|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|xylophone|Docker|lemon|Dead|Synchronized|great|birch|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|birch|zoology|Active|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|illicit|Docker|mastery|Dead|Dirty|jovial|wyvern|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|birch|atom|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|hire|LinuxService|hire|Active|Synchronized|candy|under|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|candy|mastery|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|xylophone|RKT|xylophone|Active|Dirty|flavor|dandelion|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|atom|jovial|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|flavor|LinuxService|lemon|Active|Synchronized|flavor|birch|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|wyvern|hire|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|xylophone|RKT|every|Dead|Synchronized|rest|slice|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|hire|candy|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|xylophone|Docker|lemon|Dead|Synchronized|jovial|osprey|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|candy|under|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|candy|Docker|nibble|Dead|Synchronized|great|triumph|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|xylophone|hire|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|mastery|LinuxService|past|Active|Synchronized|query|lemon|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|kick|query|Active|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|query|LinuxService|hire|Active|Synchronized|rest|yawp|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|dandelion|atom|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|jovial|Docker|past|Dead|Synchronized|past|flavor|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|past|lemon|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|flavor|RKT|great|Active|Dirty|triumph|atom|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|jovial|flavor|Active|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|every|Docker|hire|Active|Synchronized|zoology|rest|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|candy|xylophone|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|xylophone|LinuxService|wyvern|Dead|Dirty|every|kick|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|every|flavor|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|birch|LinuxService|mastery|Dead|Synchronized|zoology|dandelion|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|rest|slice|Disabled|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|every|RKT|xylophone|Dead|Dirty|kick|jovial|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|xylophone|past|Active|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|zoology|Docker|candy|Dead|Synchronized|mastery|triumph|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|dandelion|nibble|Active|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|candy|LinuxService|atom|Dead|Dirty|triumph|yawp|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|osprey|birch|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|illicit|LinuxService|kick|Active|Synchronized|every|kick|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a processingunit in processingunits:
-			|name|description|status|
-			|slice|nibble|Candidate|
+			|nativeContextID|type|serverID|operationalStatus|policyState|name|description|status|
+			|yawp|RKT|xylophone|Dead|Synchronized|slice|candy|Candidate|
 		Then the creation should be successful
 
 	Scenario: Root Get ProcessingUnit 
@@ -116,14 +116,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|lemon|great|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Dead|Dirty|wyvern|yawp|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|lemon|great|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Dead|Dirty|wyvern|yawp|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -133,14 +133,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|every|mastery|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Synchronized|under|slice|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|every|mastery|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Synchronized|under|slice|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -150,14 +150,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|past|every|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Dirty|osprey|zoology|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|past|every|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Dirty|osprey|zoology|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -167,14 +167,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|query|lemon|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Dead|Dirty|birch|osprey|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|query|lemon|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Dead|Dirty|birch|osprey|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -184,14 +184,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|query|yawp|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Dead|Dirty|great|zoology|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|query|yawp|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Dead|Dirty|great|zoology|Disabled|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -201,14 +201,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|yawp|zoology|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Synchronized|kick|slice|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|yawp|zoology|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Synchronized|kick|slice|Disabled|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -218,14 +218,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|yawp|wyvern|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Dirty|great|lemon|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|yawp|wyvern|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Dirty|great|lemon|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -235,14 +235,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|jovial|past|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Dead|Dirty|osprey|past|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|jovial|past|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Dead|Dirty|osprey|past|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -252,14 +252,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|zoology|past|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Active|Dirty|past|dandelion|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|zoology|past|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Active|Dirty|past|dandelion|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -269,14 +269,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|rest|flavor|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Active|Synchronized|vacuous|jovial|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|flavor|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Active|Synchronized|vacuous|jovial|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -286,14 +286,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|great|mastery|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Dead|Synchronized|nibble|triumph|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|great|mastery|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Dead|Synchronized|nibble|triumph|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -303,14 +303,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|triumph|atom|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Active|Dirty|candy|wyvern|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|triumph|atom|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Active|Dirty|candy|wyvern|Candidate|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -320,14 +320,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|every|triumph|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Dead|Synchronized|great|yawp|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|every|triumph|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Dead|Synchronized|great|yawp|Candidate|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -337,14 +337,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|slice|birch|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Dirty|birch|triumph|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|slice|birch|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Dirty|birch|triumph|Candidate|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -354,14 +354,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|rest|jovial|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Synchronized|flavor|jovial|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|jovial|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Synchronized|flavor|jovial|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -371,14 +371,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|atom|wyvern|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Dead|Synchronized|triumph|zoology|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|atom|wyvern|Disabled|
+			|type|operationalStatus|policyState|name|description|status|
+			|RKT|Dead|Synchronized|triumph|zoology|Candidate|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -388,14 +388,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|wyvern|every|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Dirty|every|under|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|wyvern|every|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Active|Dirty|every|under|Disabled|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -405,14 +405,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|rest|birch|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Dead|Synchronized|query|mastery|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|birch|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Dead|Synchronized|query|mastery|Disabled|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -422,14 +422,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|mastery|flavor|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Dirty|candy|osprey|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|mastery|flavor|Candidate|
+			|type|operationalStatus|policyState|name|description|status|
+			|LinuxService|Active|Dirty|candy|osprey|Active|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful
@@ -439,14 +439,14 @@ Feature: ProcessingUnit
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from processingunits:
-			|name|description|status|
-			|zoology|dandelion|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Dead|Dirty|vacuous|great|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from processingunits 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|zoology|dandelion|Active|
+			|type|operationalStatus|policyState|name|description|status|
+			|Docker|Dead|Dirty|vacuous|great|Candidate|
 
 		When SuperAdmin deletes the random object from processingunits 
 		Then the delete should be successful

@@ -7,103 +7,103 @@ Feature: Policy
 
 	Scenario: Root Create Policy 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|xylophone|vacuous|Candidate|
+			|type|name|description|status|
+			|NamespaceMapping|vacuous|lemon|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|birch|zoology|Active|
+			|type|name|description|status|
+			|NamespaceMapping|great|birch|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|birch|atom|Disabled|
+			|type|name|description|status|
+			|Statistics|candy|mastery|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|candy|mastery|Disabled|
+			|type|name|description|status|
+			|Statistics|jovial|wyvern|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|atom|jovial|Disabled|
+			|type|name|description|status|
+			|APIAuthorization|triumph|hire|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|wyvern|hire|Candidate|
+			|type|name|description|status|
+			|Syscall|candy|under|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|hire|candy|Candidate|
+			|type|name|description|status|
+			|Network|hire|xylophone|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|candy|under|Disabled|
+			|type|name|description|status|
+			|Statistics|flavor|dandelion|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|xylophone|hire|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|past|lemon|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|kick|query|Active|
+			|type|name|description|status|
+			|APIAuthorization|flavor|birch|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|dandelion|atom|Candidate|
+			|type|name|description|status|
+			|NamespaceMapping|osprey|every|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|past|lemon|Candidate|
+			|type|name|description|status|
+			|NamespaceMapping|rest|slice|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|jovial|flavor|Active|
+			|type|name|description|status|
+			|NamespaceMapping|past|lemon|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|candy|xylophone|Disabled|
+			|type|name|description|status|
+			|ExtendTags|jovial|osprey|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|every|flavor|Disabled|
+			|type|name|description|status|
+			|File|slice|nibble|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|rest|slice|Disabled|
+			|type|name|description|status|
+			|ExtendTags|great|triumph|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|xylophone|past|Active|
+			|type|name|description|status|
+			|ExtendTags|atom|past|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|dandelion|nibble|Active|
+			|type|name|description|status|
+			|ExtendTags|query|lemon|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|osprey|birch|Candidate|
+			|type|name|description|status|
+			|Network|yawp|hire|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a policy in policies:
-			|name|description|status|
-			|slice|nibble|Candidate|
+			|type|name|description|status|
+			|APIAuthorization|rest|yawp|Candidate|
 		Then the creation should be successful
 
 	Scenario: Root Get Policy 
@@ -116,14 +116,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|lemon|great|Active|
+			|type|name|description|status|
+			|APIAuthorization|jovial|past|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|lemon|great|Active|
+			|type|name|description|status|
+			|APIAuthorization|jovial|past|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -133,14 +133,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|every|mastery|Candidate|
+			|type|name|description|status|
+			|ExtendTags|past|flavor|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|every|mastery|Candidate|
+			|type|name|description|status|
+			|ExtendTags|past|flavor|Candidate|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -150,14 +150,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|past|every|Candidate|
+			|type|name|description|status|
+			|Network|every|great|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|past|every|Candidate|
+			|type|name|description|status|
+			|Network|every|great|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -167,14 +167,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|query|lemon|Active|
+			|type|name|description|status|
+			|NamespaceMapping|triumph|atom|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|query|lemon|Active|
+			|type|name|description|status|
+			|NamespaceMapping|triumph|atom|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -184,14 +184,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|query|yawp|Active|
+			|type|name|description|status|
+			|NamespaceMapping|triumph|hire|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|query|yawp|Active|
+			|type|name|description|status|
+			|NamespaceMapping|triumph|hire|Candidate|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -201,14 +201,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|yawp|zoology|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|zoology|rest|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|yawp|zoology|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|zoology|rest|Candidate|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -218,14 +218,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|yawp|wyvern|Active|
+			|type|name|description|status|
+			|ExtendTags|atom|wyvern|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|yawp|wyvern|Active|
+			|type|name|description|status|
+			|ExtendTags|atom|wyvern|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -235,14 +235,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|jovial|past|Disabled|
+			|type|name|description|status|
+			|APIAuthorization|every|kick|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|jovial|past|Disabled|
+			|type|name|description|status|
+			|APIAuthorization|every|kick|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -252,14 +252,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|zoology|past|Candidate|
+			|type|name|description|status|
+			|NamespaceMapping|every|mastery|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|zoology|past|Candidate|
+			|type|name|description|status|
+			|NamespaceMapping|every|mastery|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -269,14 +269,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|rest|flavor|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|zoology|dandelion|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|flavor|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|zoology|dandelion|Active|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -286,14 +286,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|great|mastery|Active|
+			|type|name|description|status|
+			|File|kick|xylophone|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|great|mastery|Active|
+			|type|name|description|status|
+			|File|kick|xylophone|Active|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -303,14 +303,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|triumph|atom|Disabled|
+			|type|name|description|status|
+			|ExtendTags|kick|jovial|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|triumph|atom|Disabled|
+			|type|name|description|status|
+			|ExtendTags|kick|jovial|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -320,14 +320,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|every|triumph|Disabled|
+			|type|name|description|status|
+			|APIAuthorization|lemon|candy|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|every|triumph|Disabled|
+			|type|name|description|status|
+			|APIAuthorization|lemon|candy|Active|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -337,14 +337,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|slice|birch|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|mastery|triumph|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|slice|birch|Disabled|
+			|type|name|description|status|
+			|NamespaceMapping|mastery|triumph|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -354,14 +354,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|rest|jovial|Candidate|
+			|type|name|description|status|
+			|Network|osprey|atom|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|jovial|Candidate|
+			|type|name|description|status|
+			|Network|osprey|atom|Active|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -371,14 +371,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|atom|wyvern|Disabled|
+			|type|name|description|status|
+			|Syscall|triumph|yawp|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|atom|wyvern|Disabled|
+			|type|name|description|status|
+			|Syscall|triumph|yawp|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -388,14 +388,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|wyvern|every|Active|
+			|type|name|description|status|
+			|APIAuthorization|nibble|kick|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|wyvern|every|Active|
+			|type|name|description|status|
+			|APIAuthorization|nibble|kick|Candidate|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -405,14 +405,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|rest|birch|Candidate|
+			|type|name|description|status|
+			|Statistics|every|kick|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|birch|Candidate|
+			|type|name|description|status|
+			|Statistics|every|kick|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -422,14 +422,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|mastery|flavor|Candidate|
+			|type|name|description|status|
+			|ExtendTags|illicit|xylophone|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|mastery|flavor|Candidate|
+			|type|name|description|status|
+			|ExtendTags|illicit|xylophone|Disabled|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful
@@ -439,14 +439,14 @@ Feature: Policy
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from policies:
-			|name|description|status|
-			|zoology|dandelion|Active|
+			|type|name|description|status|
+			|Syscall|slice|candy|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from policies 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|zoology|dandelion|Active|
+			|type|name|description|status|
+			|Syscall|slice|candy|Candidate|
 
 		When SuperAdmin deletes the random object from policies 
 		Then the delete should be successful

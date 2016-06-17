@@ -293,8 +293,8 @@ func getAttributes(parsed map[string]interface{}, currModel map[string]interface
 
         temp = parParsed["attributes"].([]interface{})
         for j := 0; j<len(temp); j++ {
+            tempMap := temp[j].(map[string]interface{})
             if (listAttrib[tempMap["name"].(string)]==false) {
-                tempMap := temp[j].(map[string]interface{})
                 attributes = append(attributes, tempMap)
                 listAttrib[tempMap["name"].(string)]=true
             }

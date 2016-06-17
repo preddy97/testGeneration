@@ -116,14 +116,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|lemon|great|Active|
+			|description|status|
+			|lemon|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|lemon|great|Active|
+			|description|status|
+			|lemon|Active|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -133,14 +133,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|every|mastery|Candidate|
+			|description|status|
+			|triumph|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|every|mastery|Candidate|
+			|description|status|
+			|triumph|Active|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -150,14 +150,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|past|every|Candidate|
+			|description|status|
+			|mastery|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|past|every|Candidate|
+			|description|status|
+			|mastery|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -167,14 +167,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|query|lemon|Active|
+			|description|status|
+			|past|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|query|lemon|Active|
+			|description|status|
+			|past|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -184,14 +184,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|query|yawp|Active|
+			|description|status|
+			|zoology|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|query|yawp|Active|
+			|description|status|
+			|zoology|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -201,14 +201,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|yawp|zoology|Disabled|
+			|description|status|
+			|lemon|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|yawp|zoology|Disabled|
+			|description|status|
+			|lemon|Active|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -218,14 +218,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|yawp|wyvern|Active|
+			|description|status|
+			|query|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|yawp|wyvern|Active|
+			|description|status|
+			|query|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -235,14 +235,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|jovial|past|Disabled|
+			|description|status|
+			|hire|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|jovial|past|Disabled|
+			|description|status|
+			|hire|Active|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -252,14 +252,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|zoology|past|Candidate|
+			|description|status|
+			|zoology|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|zoology|past|Candidate|
+			|description|status|
+			|zoology|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -269,14 +269,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|rest|flavor|Disabled|
+			|description|status|
+			|yawp|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|flavor|Disabled|
+			|description|status|
+			|yawp|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -286,14 +286,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|great|mastery|Active|
+			|description|status|
+			|jovial|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|great|mastery|Active|
+			|description|status|
+			|jovial|Active|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -303,14 +303,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|triumph|atom|Disabled|
+			|description|status|
+			|past|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|triumph|atom|Disabled|
+			|description|status|
+			|past|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -320,14 +320,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|every|triumph|Disabled|
+			|description|status|
+			|zoology|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|every|triumph|Disabled|
+			|description|status|
+			|zoology|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -337,14 +337,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|slice|birch|Disabled|
+			|description|status|
+			|flavor|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|slice|birch|Disabled|
+			|description|status|
+			|flavor|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -354,14 +354,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|rest|jovial|Candidate|
+			|description|status|
+			|flavor|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|jovial|Candidate|
+			|description|status|
+			|flavor|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -371,14 +371,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|atom|wyvern|Disabled|
+			|description|status|
+			|great|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|atom|wyvern|Disabled|
+			|description|status|
+			|great|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -388,14 +388,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|wyvern|every|Active|
+			|description|status|
+			|osprey|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|wyvern|every|Active|
+			|description|status|
+			|osprey|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -405,14 +405,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|rest|birch|Candidate|
+			|description|status|
+			|atom|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|rest|birch|Candidate|
+			|description|status|
+			|atom|Disabled|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -422,14 +422,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|mastery|flavor|Candidate|
+			|description|status|
+			|every|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|mastery|flavor|Candidate|
+			|description|status|
+			|every|Active|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
@@ -439,14 +439,14 @@ Feature: Authenticator
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from authenticators:
-			|name|description|status|
-			|zoology|dandelion|Active|
+			|description|status|
+			|hire|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from authenticators 
 		Then the request should be successful
 		And the body of the response should contain:
-			|name|description|status|
-			|zoology|dandelion|Active|
+			|description|status|
+			|hire|Candidate|
 
 		When SuperAdmin deletes the random object from authenticators 
 		Then the delete should be successful
