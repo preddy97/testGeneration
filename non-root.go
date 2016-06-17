@@ -274,6 +274,13 @@ func getAttributes(parsed map[string]interface{}, currModel map[string]interface
 
     var attributes []map[string]interface{}
     var listAttrib = make(map[string]bool)
+    for i := 0; i<len(temp); i++ {
+        tempMap := temp[i].(map[string]interface{})
+        if (listAttrib[tempMap["name"].(string)]==false) {
+            attributes = append(attributes, tempMap)
+            listAttrib[tempMap["name"].(string)]=true
+        }
+    }
 
     parents := currModel["extends"].([]interface{})
     for i := 0; i<len(parents); i++ {
@@ -286,23 +293,13 @@ func getAttributes(parsed map[string]interface{}, currModel map[string]interface
 
         temp = parParsed["attributes"].([]interface{})
         for j := 0; j<len(temp); j++ {
-            tempMap := temp[j].(map[string]interface{})
             if (listAttrib[tempMap["name"].(string)]==false) {
+                tempMap := temp[j].(map[string]interface{})
                 attributes = append(attributes, tempMap)
                 listAttrib[tempMap["name"].(string)]=true
             }
         }
     }
-
-    for i := 0; i<len(temp); i++ {
-        tempMap := temp[i].(map[string]interface{})
-        if (listAttrib[tempMap["name"].(string)]==false) {
-            attributes = append(attributes, tempMap)
-            listAttrib[tempMap["name"].(string)]=true
-        }
-    }
-
-
     return attributes
 }
 
