@@ -77,6 +77,7 @@ def getActual (type)
 end
 
 def hasSystem(hash)
+    puts hash["associatedTags"].class
     for i in 0..len(hash["associatedTags"])
         if hash["associatedTags"][i]=="namespace=system"
             return true
