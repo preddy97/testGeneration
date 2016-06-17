@@ -10,7 +10,7 @@ import (
   "math/rand"
 )
 
-const Repetitions int = 5
+const Repetitions int = 20
 
 var name string
 var restName string
