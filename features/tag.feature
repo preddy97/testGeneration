@@ -7,103 +7,103 @@ Feature: Tag
 
 	Scenario: Root Create Tag 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|temp=true|vacuous|lemon|birch|zoology|Active|
+			|name|description|status|
+			|xylophone|vacuous|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|key=value|atom|illicit|candy|mastery|Disabled|
+			|name|description|status|
+			|birch|zoology|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|past=tense|jovial|wyvern|wyvern|hire|Candidate|
+			|name|description|status|
+			|birch|atom|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|past=tense|candy|triumph|candy|under|Disabled|
+			|name|description|status|
+			|candy|mastery|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|past=tense|hire|xylophone|kick|query|Active|
+			|name|description|status|
+			|atom|jovial|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|temp=true|atom|flavor|past|lemon|Candidate|
+			|name|description|status|
+			|wyvern|hire|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|past=tense|flavor|birch|candy|xylophone|Disabled|
+			|name|description|status|
+			|hire|candy|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|hero=villain|flavor|flavor|rest|slice|Disabled|
+			|name|description|status|
+			|candy|under|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|hero=villain|past|lemon|dandelion|nibble|Active|
+			|name|description|status|
+			|xylophone|hire|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|key=value|birch|candy|slice|nibble|Candidate|
+			|name|description|status|
+			|kick|query|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|temp=true|great|triumph|every|mastery|Candidate|
+			|name|description|status|
+			|dandelion|atom|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|temp=true|every|zoology|query|lemon|Active|
+			|name|description|status|
+			|past|lemon|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|past=tense|yawp|hire|yawp|zoology|Disabled|
+			|name|description|status|
+			|jovial|flavor|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|temp=true|wyvern|jovial|jovial|past|Disabled|
+			|name|description|status|
+			|candy|xylophone|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|temp=true|past|flavor|rest|flavor|Disabled|
+			|name|description|status|
+			|every|flavor|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|live=die|mastery|osprey|triumph|atom|Disabled|
+			|name|description|status|
+			|rest|slice|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|past=tense|triumph|hire|slice|birch|Disabled|
+			|name|description|status|
+			|xylophone|past|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|key=value|jovial|xylophone|atom|wyvern|Disabled|
+			|name|description|status|
+			|dandelion|nibble|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|key=value|every|kick|rest|birch|Candidate|
+			|name|description|status|
+			|osprey|birch|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a tag in tags:
-			|keyValuePair|value|key|name|description|status|
-			|hero=villain|flavor|dandelion|zoology|dandelion|Active|
+			|name|description|status|
+			|slice|nibble|Candidate|
 		Then the creation should be successful
 
 	Scenario: Root Get Tag 
@@ -116,14 +116,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|temp=true|kick|xylophone|Active|
+			|name|description|status|
+			|lemon|great|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|temp=true|kick|xylophone|Active|
+			|name|description|status|
+			|lemon|great|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -133,14 +133,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|temp=true|kick|jovial|Disabled|
+			|name|description|status|
+			|every|mastery|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|temp=true|kick|jovial|Disabled|
+			|name|description|status|
+			|every|mastery|Candidate|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -150,14 +150,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|hero=villain|lemon|candy|Active|
+			|name|description|status|
+			|past|every|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|hero=villain|lemon|candy|Active|
+			|name|description|status|
+			|past|every|Candidate|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -167,14 +167,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|key=value|mastery|triumph|Disabled|
+			|name|description|status|
+			|query|lemon|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|key=value|mastery|triumph|Disabled|
+			|name|description|status|
+			|query|lemon|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -184,14 +184,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|live=die|osprey|atom|Active|
+			|name|description|status|
+			|query|yawp|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|live=die|osprey|atom|Active|
+			|name|description|status|
+			|query|yawp|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -201,14 +201,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|hero=villain|triumph|yawp|Disabled|
+			|name|description|status|
+			|yawp|zoology|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|hero=villain|triumph|yawp|Disabled|
+			|name|description|status|
+			|yawp|zoology|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -218,14 +218,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|temp=true|nibble|kick|Candidate|
+			|name|description|status|
+			|yawp|wyvern|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|temp=true|nibble|kick|Candidate|
+			|name|description|status|
+			|yawp|wyvern|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -235,14 +235,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|temp=true|every|kick|Disabled|
+			|name|description|status|
+			|jovial|past|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|temp=true|every|kick|Disabled|
+			|name|description|status|
+			|jovial|past|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -252,14 +252,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|hero=villain|illicit|xylophone|Disabled|
+			|name|description|status|
+			|zoology|past|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|hero=villain|illicit|xylophone|Disabled|
+			|name|description|status|
+			|zoology|past|Candidate|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -269,14 +269,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|temp=true|slice|candy|Candidate|
+			|name|description|status|
+			|rest|flavor|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|temp=true|slice|candy|Candidate|
+			|name|description|status|
+			|rest|flavor|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -286,14 +286,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|past=tense|nibble|slice|Active|
+			|name|description|status|
+			|great|mastery|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|past=tense|nibble|slice|Active|
+			|name|description|status|
+			|great|mastery|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -303,14 +303,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|past=tense|nibble|slice|Active|
+			|name|description|status|
+			|triumph|atom|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|past=tense|nibble|slice|Active|
+			|name|description|status|
+			|triumph|atom|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -320,14 +320,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|live=die|under|slice|Active|
+			|name|description|status|
+			|every|triumph|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|live=die|under|slice|Active|
+			|name|description|status|
+			|every|triumph|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -337,14 +337,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|key=value|mastery|atom|Disabled|
+			|name|description|status|
+			|slice|birch|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|key=value|mastery|atom|Disabled|
+			|name|description|status|
+			|slice|birch|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -354,14 +354,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|past=tense|flavor|zoology|Candidate|
+			|name|description|status|
+			|rest|jovial|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|past=tense|flavor|zoology|Candidate|
+			|name|description|status|
+			|rest|jovial|Candidate|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -371,14 +371,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|key=value|birch|osprey|Active|
+			|name|description|status|
+			|atom|wyvern|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|key=value|birch|osprey|Active|
+			|name|description|status|
+			|atom|wyvern|Disabled|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -388,14 +388,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|key=value|flavor|query|Active|
+			|name|description|status|
+			|wyvern|every|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|key=value|flavor|query|Active|
+			|name|description|status|
+			|wyvern|every|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -405,14 +405,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|past=tense|slice|nibble|Candidate|
+			|name|description|status|
+			|rest|birch|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|past=tense|slice|nibble|Candidate|
+			|name|description|status|
+			|rest|birch|Candidate|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -422,14 +422,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|hero=villain|kick|slice|Disabled|
+			|name|description|status|
+			|mastery|flavor|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|hero=villain|kick|slice|Disabled|
+			|name|description|status|
+			|mastery|flavor|Candidate|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful
@@ -439,14 +439,14 @@ Feature: Tag
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from tags:
-			|keyValuePair|name|description|status|
-			|key=value|osprey|illicit|Candidate|
+			|name|description|status|
+			|zoology|dandelion|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from tags 
 		Then the request should be successful
 		And the body of the response should contain:
-			|keyValuePair|name|description|status|
-			|key=value|osprey|illicit|Candidate|
+			|name|description|status|
+			|zoology|dandelion|Active|
 
 		When SuperAdmin deletes the random object from tags 
 		Then the delete should be successful

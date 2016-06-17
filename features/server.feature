@@ -7,103 +7,103 @@ Feature: Server
 
 	Scenario: Root Create Server 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|xylophone|GCP|UNKNOWN|birch|zoology|Active|
+			|name|description|status|
+			|xylophone|vacuous|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|birch|AWS|CONNECTED|candy|mastery|Disabled|
+			|name|description|status|
+			|birch|zoology|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|atom|GCP|CONNECTED|wyvern|hire|Candidate|
+			|name|description|status|
+			|birch|atom|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|hire|AWS|UNKNOWN|candy|under|Disabled|
+			|name|description|status|
+			|candy|mastery|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|xylophone|GCP|CONNECTED|kick|query|Active|
+			|name|description|status|
+			|atom|jovial|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|dandelion|AWS|UNKNOWN|past|lemon|Candidate|
+			|name|description|status|
+			|wyvern|hire|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|jovial|GCP|INITIALIZED|candy|xylophone|Disabled|
+			|name|description|status|
+			|hire|candy|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|every|GCP|CONNECTED|rest|slice|Disabled|
+			|name|description|status|
+			|candy|under|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|xylophone|GCP|INITIALIZED|dandelion|nibble|Active|
+			|name|description|status|
+			|xylophone|hire|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|osprey|GCP|UNKNOWN|slice|nibble|Candidate|
+			|name|description|status|
+			|kick|query|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|lemon|AWS|INITIALIZED|every|mastery|Candidate|
+			|name|description|status|
+			|dandelion|atom|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|past|AWS|UNKNOWN|query|lemon|Active|
+			|name|description|status|
+			|past|lemon|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|query|AWS|INITIALIZED|yawp|zoology|Disabled|
+			|name|description|status|
+			|jovial|flavor|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|yawp|AWS|INITIALIZED|jovial|past|Disabled|
+			|name|description|status|
+			|candy|xylophone|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|zoology|GCP|UNKNOWN|rest|flavor|Disabled|
+			|name|description|status|
+			|every|flavor|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|great|AWS|INITIALIZED|triumph|atom|Disabled|
+			|name|description|status|
+			|rest|slice|Disabled|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|every|GCP|CONNECTED|slice|birch|Disabled|
+			|name|description|status|
+			|xylophone|past|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|GCP|UNKNOWN|atom|wyvern|Disabled|
+			|name|description|status|
+			|dandelion|nibble|Active|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|wyvern|AWS|INITIALIZED|rest|birch|Candidate|
+			|name|description|status|
+			|osprey|birch|Candidate|
 		Then the creation should be successful
 
 		When SuperAdmin creates a server in servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|mastery|GCP|UNKNOWN|zoology|dandelion|Active|
+			|name|description|status|
+			|slice|nibble|Candidate|
 		Then the creation should be successful
 
 	Scenario: Root Get Server 
@@ -116,14 +116,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|every|AWS|INITIALIZED|birch|atom|Active|
+			|name|description|status|
+			|lemon|great|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|every|AWS|INITIALIZED|birch|atom|Active|
+			|name|description|status|
+			|lemon|great|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -133,14 +133,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|jovial|AWS|CONNECTED|lemon|candy|Active|
+			|name|description|status|
+			|every|mastery|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|jovial|AWS|CONNECTED|lemon|candy|Active|
+			|name|description|status|
+			|every|mastery|Candidate|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -150,14 +150,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|triumph|AWS|INITIALIZED|triumph|candy|Candidate|
+			|name|description|status|
+			|past|every|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|triumph|AWS|INITIALIZED|triumph|candy|Candidate|
+			|name|description|status|
+			|past|every|Candidate|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -167,14 +167,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|atom|GCP|INITIALIZED|triumph|yawp|Disabled|
+			|name|description|status|
+			|query|lemon|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|atom|GCP|INITIALIZED|triumph|yawp|Disabled|
+			|name|description|status|
+			|query|lemon|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -184,14 +184,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|illicit|GCP|UNKNOWN|atom|rest|Candidate|
+			|name|description|status|
+			|query|yawp|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|illicit|GCP|UNKNOWN|atom|rest|Candidate|
+			|name|description|status|
+			|query|yawp|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -201,14 +201,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|kick|GCP|CONNECTED|illicit|xylophone|Disabled|
+			|name|description|status|
+			|yawp|zoology|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|kick|GCP|CONNECTED|illicit|xylophone|Disabled|
+			|name|description|status|
+			|yawp|zoology|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -218,14 +218,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|AWS|CONNECTED|candy|triumph|Active|
+			|name|description|status|
+			|yawp|wyvern|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|AWS|CONNECTED|candy|triumph|Active|
+			|name|description|status|
+			|yawp|wyvern|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -235,14 +235,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|slice|AWS|INITIALIZED|nibble|slice|Active|
+			|name|description|status|
+			|jovial|past|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|slice|AWS|INITIALIZED|nibble|slice|Active|
+			|name|description|status|
+			|jovial|past|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -252,14 +252,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|AWS|INITIALIZED|slice|vacuous|Active|
+			|name|description|status|
+			|zoology|past|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|AWS|INITIALIZED|slice|vacuous|Active|
+			|name|description|status|
+			|zoology|past|Candidate|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -269,14 +269,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|atom|AWS|CONNECTED|flavor|zoology|Candidate|
+			|name|description|status|
+			|rest|flavor|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|atom|AWS|CONNECTED|flavor|zoology|Candidate|
+			|name|description|status|
+			|rest|flavor|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -286,14 +286,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|slice|GCP|CONNECTED|jovial|illicit|Active|
+			|name|description|status|
+			|great|mastery|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|slice|GCP|CONNECTED|jovial|illicit|Active|
+			|name|description|status|
+			|great|mastery|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -303,14 +303,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|query|AWS|CONNECTED|slice|nibble|Candidate|
+			|name|description|status|
+			|triumph|atom|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|query|AWS|CONNECTED|slice|nibble|Candidate|
+			|name|description|status|
+			|triumph|atom|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -320,14 +320,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|triumph|AWS|INITIALIZED|mastery|vacuous|Active|
+			|name|description|status|
+			|every|triumph|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|triumph|AWS|INITIALIZED|mastery|vacuous|Active|
+			|name|description|status|
+			|every|triumph|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -337,14 +337,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|illicit|AWS|INITIALIZED|osprey|past|Disabled|
+			|name|description|status|
+			|slice|birch|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|illicit|AWS|INITIALIZED|osprey|past|Disabled|
+			|name|description|status|
+			|slice|birch|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -354,14 +354,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|under|AWS|UNKNOWN|every|dandelion|Active|
+			|name|description|status|
+			|rest|jovial|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|under|AWS|UNKNOWN|every|dandelion|Active|
+			|name|description|status|
+			|rest|jovial|Candidate|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -371,14 +371,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|under|GCP|UNKNOWN|osprey|mastery|Active|
+			|name|description|status|
+			|atom|wyvern|Disabled|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|under|GCP|UNKNOWN|osprey|mastery|Active|
+			|name|description|status|
+			|atom|wyvern|Disabled|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -388,14 +388,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|GCP|CONNECTED|atom|rest|Disabled|
+			|name|description|status|
+			|wyvern|every|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|rest|GCP|CONNECTED|atom|rest|Disabled|
+			|name|description|status|
+			|wyvern|every|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -405,14 +405,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|lemon|GCP|UNKNOWN|xylophone|yawp|Disabled|
+			|name|description|status|
+			|rest|birch|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|lemon|GCP|UNKNOWN|xylophone|yawp|Disabled|
+			|name|description|status|
+			|rest|birch|Candidate|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -422,14 +422,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|under|AWS|CONNECTED|kick|slice|Active|
+			|name|description|status|
+			|mastery|flavor|Candidate|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|under|AWS|CONNECTED|kick|slice|Active|
+			|name|description|status|
+			|mastery|flavor|Candidate|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
@@ -439,14 +439,14 @@ Feature: Server
 		Then the request should be successful
 
 		When SuperAdmin updates the random object from servers:
-			|certificate|environment|operationalStatus|name|description|status|
-			|birch|AWS|CONNECTED|rest|atom|Active|
+			|name|description|status|
+			|zoology|dandelion|Active|
 		Then the update should be successful
 		When SuperAdmin asks for the random object from servers 
 		Then the request should be successful
 		And the body of the response should contain:
-			|certificate|environment|operationalStatus|name|description|status|
-			|birch|AWS|CONNECTED|rest|atom|Active|
+			|name|description|status|
+			|zoology|dandelion|Active|
 
 		When SuperAdmin deletes the random object from servers 
 		Then the delete should be successful
