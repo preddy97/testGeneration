@@ -2,7 +2,7 @@ require 'httparty'
 require 'test/unit/assertions'
 include Test::Unit::Assertions
 
-When /^(.*) (creates|updates) a (.*) in (.*):$/ do |usr, _, _, str, table|
+When /^(.*) creates a (.*) in (.*):$/ do |usr, _, _, str, table|
   temp = table.hashes[0]
   temp.each {|key, value| convToBoolean(temp, key,value) }
   temp = temp.to_json
@@ -11,16 +11,7 @@ When /^(.*) (creates|updates) a (.*) in (.*):$/ do |usr, _, _, str, table|
                                  headers: {"X-Namespace" => @users[usr]["namespace"]})
 end
 
-When /^(.*) updates the random object from (.*):$/ do |usr, str, table|
-    temp = table.hashes[0]
-    temp.each {|key, value| convToBoolean(temp, key,value) }
-    temp = temp.to_json
-    @last_response = HTTParty.post(randObjURL(str),
-                                   body: temp,
-                                   headers: {"X-Namespace" => @users[usr]["namespace"]})
-end
-
-When /^(.*) with header @(.*) (creates|updates) a (.*) in (.*):$/ do |usr, obj, _, _, str, table|
+When /^(.*) with header @(.*) creates a (.*) in (.*):$/ do |usr, obj, _, _, str, table|
   temp = table.hashes[0]
   temp.each {|key, value| convToBoolean(temp, key,value) }
   temp = temp.to_json

@@ -20,4 +20,5 @@ When /^(.*) chooses a random (.*) from all (.*)/ do |usr, obj, grp|
     else
         @randObjID = temp[0]["ID"]
     end
+    puts @randObjID
 end
