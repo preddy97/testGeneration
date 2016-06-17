@@ -75,3 +75,12 @@ def getActual (type)
 
   return actual
 end
+
+def hasSystem(hash)
+    for i in 0..len(hash["associatedTags"])
+        if hash["associatedTags"][i]=="namespace=system"
+            return true
+        end
+    end
+    return false
+end

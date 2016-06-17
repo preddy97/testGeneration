@@ -157,7 +157,9 @@ func getPossibleAttributes(action string) (possibleAttributes map[string][]strin
                 temp := attributes[i]["allowed_choices"].([]interface{})
                 choices := make([]string, len(temp))
                 for i := range temp {
-                    choices[i] = temp[i].(string)
+                    if (temp[i].(string)!="Deleted") {
+                        choices[i] = temp[i].(string)
+                    }
                 }
                 possibleAttributes[attributeName]=choices
                 keys = append(keys, attributeName)

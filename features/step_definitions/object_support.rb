@@ -16,9 +16,22 @@ When /^(.*) chooses a random (.*) from all (.*)/ do |usr, obj, grp|
                                   headers: {"X-Namespace" => @users[usr]["namespace"]})
     temp = JSON.parse(@last_response.body)
     if (temp.class.to_s=="Hash")
-        @randObjID = temp["ID"]
+        actual = Array.new(1)
+        actual[0] = temp
     else
-        @randObjID = temp[0]["ID"]
+        actual = temp
     end
+
+    isSystem = true
+    index = 0
+    while (isSystem == true)
+        if (hasSystem(temp[index])
+            index=index+1
+        else
+            isSystem = false
+            @randObjID = temp[index]["ID"]
+        end
+    end
+
     puts @randObjID
 end
