@@ -23,13 +23,17 @@ end
 Then /^the delete should be successful$/ do
   puts @last_response.body
   puts @last_response.code
-  if @last_response.code == 204
-      assert true
+  if (@last_response.code>199 && @last_response.code<300)
+    assert true
   else
-      assert false
+    assert false
   end
 end
 
 Then /^the delete should be unsuccessful$/ do
-  assert_not_equal @last_response.code, 204
+    if (@last_response.code>199 && @last_response.code<300)
+      assert false
+    else
+      assert true
+    end
 end
