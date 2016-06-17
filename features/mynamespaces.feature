@@ -9,24 +9,3 @@ Feature: MyNamespaces
 		When SuperAdmin requests mynamespaces
 		Then the request should be successful
 
-	Scenario: MyNamespaces Specific ID Operations
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces
-		When SuperAdmin chooses a random mynamespaces from all mynamespaces

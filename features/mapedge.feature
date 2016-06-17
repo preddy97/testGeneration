@@ -5,24 +5,3 @@ Feature: MapEdge
 		| name       | namespace  |
 		| SuperAdmin | SuperAdmin |
 
-	Scenario: MapEdge Specific ID Operations
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges
-		When SuperAdmin chooses a random mapedge from all mapedges

@@ -9,24 +9,3 @@ Feature: DependencyMap
 		When SuperAdmin requests dependencymaps
 		Then the request should be successful
 
-	Scenario: DependencyMap Specific ID Operations
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps
-		When SuperAdmin chooses a random dependencymap from all dependencymaps

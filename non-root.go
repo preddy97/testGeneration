@@ -36,18 +36,22 @@ func main() {
 }
 
 func addIDOperations(f *os.File) {
-    f.WriteString(strings.Join([]string{"\tScenario:",name,"Specific ID Operations\n"}," "))
-    for i := 0; i<Repetitions; i++ {
-        f.WriteString(strings.Join([]string{"\t\tWhen ",user," chooses a random ", restName,
-                                    " from all ", resourceName, "\n"},""))
-        if model["get"]==true {
-            addGet(f)
-        }
-        if model["update"]==true {
-            addUpdate(f)
-        }
-        if model["delete"]==true {
-            addDelete(f)
+    if model["get"]==true || model["update"]==true || model["delete"]==true {
+        f.WriteString(strings.Join([]string{"\tScenario:",name,"Specific ID Operations\n"}," "))
+
+        for i := 0; i<Repetitions; i++ {
+
+            f.WriteString(strings.Join([]string{"\t\tWhen ",user," chooses a random ", restName,
+                                        " from all ", resourceName, "\n"},""))
+            if model["get"]==true {
+                addGet(f)
+            }
+            if model["update"]==true {
+                addUpdate(f)
+            }
+            if model["delete"]==true {
+                addDelete(f)
+            }
         }
     }
 }

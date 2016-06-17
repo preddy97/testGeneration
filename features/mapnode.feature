@@ -5,24 +5,3 @@ Feature: MapNode
 		| name       | namespace  |
 		| SuperAdmin | SuperAdmin |
 
-	Scenario: MapNode Specific ID Operations
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
-		When SuperAdmin chooses a random mapnode from all mapnodes
