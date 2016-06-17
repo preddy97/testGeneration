@@ -25,7 +25,7 @@ When /^(.*) chooses a random (.*) from all (.*)/ do |usr, obj, grp|
     isSystem = true
     index = 0
     while (isSystem == true)
-        if (hasSystem(temp[index])
+        if (hasSystem(temp[index]))
             index=index+1
         else
             isSystem = false
