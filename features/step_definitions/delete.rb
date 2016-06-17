@@ -21,7 +21,11 @@ When /^(.*) deletes the random object from (.*)$/ do |usr, str|
 end
 
 Then /^the delete should be successful$/ do
-  assert_equal @last_response.code, 204
+  if @last_response.code == 204
+      assert true
+  else
+      assert false
+  end
 end
 
 Then /^the delete should be unsuccessful$/ do
