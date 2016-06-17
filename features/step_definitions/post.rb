@@ -2,7 +2,7 @@ require 'httparty'
 require 'test/unit/assertions'
 include Test::Unit::Assertions
 
-When /^(.*) creates a (.*) in (.*):$/ do |usr, _, _, str, table|
+When /^(.*) creates a (.*) in (.*):$/ do |usr, _, str, table|
   temp = table.hashes[0]
   temp.each {|key, value| convToBoolean(temp, key,value) }
   temp = temp.to_json
@@ -11,7 +11,7 @@ When /^(.*) creates a (.*) in (.*):$/ do |usr, _, _, str, table|
                                  headers: {"X-Namespace" => @users[usr]["namespace"]})
 end
 
-When /^(.*) with header @(.*) creates a (.*) in (.*):$/ do |usr, obj, _, _, str, table|
+When /^(.*) with header @(.*) creates a (.*) in (.*):$/ do |usr, obj, _, str, table|
   temp = table.hashes[0]
   temp.each {|key, value| convToBoolean(temp, key,value) }
   temp = temp.to_json
